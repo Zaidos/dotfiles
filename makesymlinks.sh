@@ -15,7 +15,7 @@ files="bashrc vimrc vim zshrc oh-my-zsh"
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing fotfiles in ~..."
-makdir -p $olddir
+mkdir -p $olddir
 echo "Done."
 
 # change to the dotfiles directory

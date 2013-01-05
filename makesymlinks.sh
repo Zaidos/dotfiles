@@ -9,7 +9,7 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="bashrc vimrc vim zshrc oh-my-zsh"
+files="bashrc bash_profile vimrc vim zshrc oh-my-zsh"
 
 ########
 
@@ -32,7 +32,7 @@ for file in $files; do
 done
 
 function install_zsh {
-  if [ -f /bin/zsh -o -f /usr/bin/zsh]; then
+  if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     if [[ ! -d $dir/oh-my-zsh/ ]]; then
       git clone http://github.com/michaeljsmalley/oh-my-zsh.git
     fi

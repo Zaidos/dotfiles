@@ -5,7 +5,18 @@ filetype plugin on
 filetype indent on
 
 let mapleader = ","
+
 let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
+
+inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplcache#close_popup()
+inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
 set autoread
 set nocompatible
@@ -39,7 +50,9 @@ set list
 set listchars=tab:▸\ ,trail:·,eol:¬
 
 nmap <leader>l :set list!<CR>
-map <Leader>t :w\|!rspec spec<cr>
+nmap <Leader>t :w\|!rspec % --colour -p<CR>
+
+imap jj <Esc>
 
 nmap <D-[> <<
 nmap <D-]> >>

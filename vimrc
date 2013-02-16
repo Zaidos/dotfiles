@@ -50,7 +50,6 @@ set list
 set listchars=tab:▸\ ,trail:·,eol:¬
 
 nmap <leader>l :set list!<CR>
-nmap <Leader>t :w\|!rspec % --colour -p<CR>
 
 imap jj <Esc>
 
@@ -92,3 +91,17 @@ function! StripWhiteSpace ()
 endfunction
 
 map ,s :call StripWhiteSpace ()<CR>
+
+function! RSpecFile()
+  execute("!clear && rspec " . expand("%p"))
+endfunction
+
+map <leader>R :call RSpecFile() <CR>
+command! RSpecFile call RSpecFile()
+
+function! RSpecCurrent()
+  execute("!clear && rspec " . expand("%p") . ":" . line("."))
+endfunction
+
+map <leader>r :call RSpecCurrent() <CR>
+command! RSpecCurrent call RSpecCurrent()

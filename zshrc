@@ -39,6 +39,7 @@ source $ZSH/oh-my-zsh.sh
 source /usr/local/opt/autoenv/activate.sh
 
 # Customize to your needs...
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

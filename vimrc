@@ -1,4 +1,7 @@
 call pathogen#infect()
+
+let &t_Co=256
+
 set history=700
 
 filetype plugin on
@@ -37,8 +40,11 @@ set showmode
 set showmatch
 
 syntax enable
+set background=dark
+colorscheme solarized
 
 set encoding=utf8
+set mouse=a
 
 set nobackup
 set nowb
@@ -73,6 +79,10 @@ set nowrap
 set linebreak
 
 set textwidth=80
+let &colorcolumn=join(range(81,999),",")
+let &colorcolumn="80,".join(range(120,999),",")
+highlight ColorColumn ctermbg=236 guibg=#93A1A1
+
 
 set foldmethod=indent
 set foldnestmax=3
@@ -93,14 +103,14 @@ endfunction
 map ,s :call StripWhiteSpace ()<CR>
 
 function! RSpecFile()
-  execute("!clear && rspec " . expand("%p"))
+  execute("!clear && rspec --colour -p --format nested " . expand("%p"))
 endfunction
 
 map <leader>R :call RSpecFile() <CR>
 command! RSpecFile call RSpecFile()
 
 function! RSpecCurrent()
-  execute("!clear && rspec " . expand("%p") . ":" . line("."))
+  execute("!clear && rspec --colour -p --format nested " . expand("%p") . ":" . line("."))
 endfunction
 
 map <leader>r :call RSpecCurrent() <CR>

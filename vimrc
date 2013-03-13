@@ -24,6 +24,9 @@ inoremap <expr><C-e>  neocomplcache#cancel_popup()
 set autoread
 set nocompatible
 set visualbell
+set cursorline
+
+set spell
 
 set number
 set ruler
@@ -77,12 +80,12 @@ set mat=5
 
 set nowrap
 set linebreak
+set autoindent
 
 set textwidth=80
 let &colorcolumn=join(range(81,999),",")
 let &colorcolumn="80,".join(range(120,999),",")
-highlight ColorColumn ctermbg=236 guibg=#93A1A1
-
+highlight ColorColumn ctermbg=Black guibg=Black
 
 set foldmethod=indent
 set foldnestmax=3

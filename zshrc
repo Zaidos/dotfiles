@@ -46,5 +46,6 @@ export PATH=$PATH:$HOME/.rvm/bin
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/opt/autoenv/activate.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

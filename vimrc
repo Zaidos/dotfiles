@@ -3,6 +3,7 @@ call pathogen#infect()
 let &t_Co=256
 
 set history=700
+set laststatus=2
 
 filetype plugin on
 filetype indent on

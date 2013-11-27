@@ -100,6 +100,9 @@ highlight def link rubyRspec Function
 
 autocmd BufRead,BufNewFile *.erb set filetype=eruby.html
 
+autocmd Filetype python setlocal ts=4 sts=4 sw=4
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
 function! StripWhiteSpace ()
   exec ':%s/\s\+$//gc'
 endfunction

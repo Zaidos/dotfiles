@@ -12,6 +12,8 @@ ZSH_THEME="robbyrussell"
 # -----------------------------------------------
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
+
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"

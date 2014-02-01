@@ -14,7 +14,6 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
 
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -42,7 +41,7 @@ plugins=(git rails ruby osx brew coffee github heroku node pip rake python rvm)
 # -----------------------------------------------
 # Exports
 # -----------------------------------------------
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:$PATH
 export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 export PATH=/usr/local/heroku/bin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin

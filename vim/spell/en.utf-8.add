@@ -20,3 +20,5 @@ Facebook
 def
 head
 html
+def
+METAR

@@ -46,6 +46,7 @@ export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 export PATH=/usr/local/heroku/bin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin
 
+source $HOME/.nvm/nvm.sh
 source $ZSH/oh-my-zsh.sh
 source /usr/local/opt/autoenv/activate.sh
 source /usr/local/bin/virtualenvwrapper.sh

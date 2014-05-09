@@ -102,6 +102,7 @@ autocmd BufRead *_spec.rb syn keyword rubyRspec describe context it specify it_s
 highlight def link rubyRspec Function
 
 autocmd BufRead,BufNewFile *.erb set filetype=eruby.html
+autocmd BufREad,BufNewFile *.kml set filetype=kml syntax=xml
 
 autocmd Filetype python setlocal ts=4 sts=4 sw=4
 autocmd Filetype gitcommit setlocal spell textwidth=72
@@ -111,17 +112,3 @@ function! StripWhiteSpace ()
 endfunction
 
 map ,s :call StripWhiteSpace ()<CR>
-
-function! RSpecFile()
-  execute("!clear && rspec --colour -p --format nested " . expand("%p"))
-endfunction
-
-map <leader>R :call RSpecFile() <CR>
-command! RSpecFile call RSpecFile()
-
-function! RSpecCurrent()
-  execute("!clear && rspec --colour -p --format nested " . expand("%p") . ":" . line("."))
-endfunction
-
-map <leader>r :call RSpecCurrent() <CR>
-command! RSpecCurrent call RSpecCurrent()
